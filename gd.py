@@ -26,9 +26,13 @@ def plot_score(score):
 
     plt.savefig('./strength.png')
 
-
+# Plot the loss graph
 def plot_loss(L):
+    plt.clf()
     plt.plot(np.arange(len(L)), L)
+    plt.title('gradient descent loss')
+    plt.ylabel('loss')
+    plt.xlabel('iteration')
     plt.savefig('./loss.png')
 
 # mean square differential w.r.t S (each team's strenth score)
